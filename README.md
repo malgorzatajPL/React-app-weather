@@ -1,31 +1,11 @@
 React app for check weather
 
+PLAN
 
-Plan
+Attach animations to the app waiting while downloading data
 
+Create a component for error
 
-Add loading.js waiting animations
+Add input. Create a function in which, after entering the city correctly, the weather was displayed and an error for an undefined one.
 
-
-Make animations to change the weather ./src/animations
-
-
-Break down applications into components:
-
-
-- loading
-
-
-- box search
-
-
-Add a search button to the box so that it works like enter when you press it
-
-
-Remove unnecessary code
-
-
-Test
-
-
-Host // github pages? Netlify
+Create easy transition to animation. // css transition
