@@ -1,13 +1,12 @@
-import ReactDOM from 'react-dom'
-import React from 'react'
-import Spiner from './components/Loading'
-import Search from './components/Search' 
+import ReactDOM from 'react-dom';
+import React from 'react';
+import CurrentDate from './components/date';
 
 // https://github.com/lottie-react-native/lottie-react-native
 
 const App = () => {
-    return <Search />
-}
-export default App
+    return <CurrentDate />;
+};
+export default App;
 
-ReactDOM.render(<App />, document.querySelector('#root'))
+ReactDOM.render(<App />, document.querySelector('#root'));

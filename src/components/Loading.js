@@ -1,11 +1,11 @@
 import Lottie from "lottie-react";
 import loading from "../animations/loading.json";
 
-const Spiner = () => {
+const Loading = () => {
  
         return (
         <Lottie animationData={loading} />
         );
     }
 
-export default Spiner;
+export default Loading;
