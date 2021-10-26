@@ -1,19 +1,65 @@
 import React from 'react';
-import Lottie from 'lottie-react';
-import winter from '../animations/winter.json';
-import summer from '../animations/summer.json';
 
-const CheckSeason = () => {
-    const style = {
-        height: 500,
-    };
-    const currentTemp = '10';
-    const Season = [
-        <Lottie animationData={winter} style={style} />,
-        <Lottie animationData={summer} style={style} />,
-    ];
-
-    return currentTemp > '5' ? Season[0] : Season[1];
+const content = {
+    display: 'flex',
+    justifyContent: 'space-around',
 };
 
-export default CheckSeason;
+const styleDescription = {
+    padding: '14px',
+    fontSize: '16px',
+    textAlign: 'center',
+    lineHeight: '1.5',
+};
+
+const Weather = (props) => {
+    return (
+        <div style={content}>
+            <div className="content-weather">
+                <div className="description-weather" style={styleDescription}>
+                    {props.city ? (
+                        <span>
+                            City: <br></br>
+                            {props.city}{' '}
+                        </span>
+                    ) : null}
+                </div>
+                <div className="description-weather" style={styleDescription}>
+                    {props.temp_celsius ? (
+                        <span>
+                            Current temperature: <br></br>
+                            {props.temp_celsius}&deg;C
+                        </span>
+                    ) : null}
+                </div>
+                <div className="description-weather" style={styleDescription}>
+                    {props.temp_min ? (
+                        <span>
+                            Min. temperature: <br></br>
+                            {props.temp_min}&deg;C
+                        </span>
+                    ) : null}
+                </div>
+                <div className="description-weather" style={styleDescription}>
+                    {props.temp_max ? (
+                        <span>
+                            Max. temperature: <br></br>
+                            {props.temp_max}&deg;C
+                        </span>
+                    ) : null}
+                </div>
+                <div className="description-weather" style={styleDescription}>
+                    {props.description ? (
+                        <span>
+                            Description: <br></br>
+                            {props.description}
+                        </span>
+                    ) : null}
+                </div>
+            </div>
+            <div className="season-animation">{props.season}</div>
+        </div>
+    );
+};
+
+export default Weather;

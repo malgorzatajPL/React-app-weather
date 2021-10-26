@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import error from "../animations/error.json";
+import error from "./error.json";
 import { Card} from 'semantic-ui-react'
 
 const description = [
@@ -16,4 +16,4 @@ const Error = () => (
   </Card>
 )
 
-export default Error
+export default Error;

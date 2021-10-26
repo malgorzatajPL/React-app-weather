@@ -1,0 +1,39 @@
+import React from 'react';
+
+const Form = (props) => {
+    const css = `
+    .ui.button:not(.icon)>.icon:not(.button):not(.dropdown){
+        margin:0;
+    }
+    .form{
+        display:flex;
+        justify-content: center;
+    }
+    `;
+    return (
+        <div className="container">
+            {' '}
+            <style>{css}</style>
+            <h1 className="ui center aligned icon header">Weather app</h1>
+            <form onSubmit={props.loadWeather} className="form">
+                <div className="ui fluid category search">
+                    <div className="ui icon input">
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="city"
+                            placeholder="City"
+                            autoComplete="off"
+                        />
+                        <button className="ui inverted violet button">
+                            {' '}
+                            <i class="search icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    );
+};
+
+export default Form;
