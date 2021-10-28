@@ -44,8 +44,8 @@ class MyComponent extends React.Component {
 
     getWeather = async (e) => {
         e.preventDefault();
-
         const city = e.target.elements.city.value;
+        
         if (city ? this.getWeather : this.error) {
             const api_call = await fetch(
                 `https://api.openweathermap.org/data/2.5/weather?q=${city} &appid=${API_key}`
