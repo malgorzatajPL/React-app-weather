@@ -26,6 +26,7 @@ class CurrentDate extends Component {
             'Friday',
             'Saturday',
         ];
+
         const dat = new Date(),
             calendar =
                 days[dat.getDay()] + ' ' +

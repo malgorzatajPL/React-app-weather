@@ -1,22 +1,25 @@
 import React from 'react';
 
-const content = {
-    display: 'flex',
-    justifyContent: 'space-around',
-};
-
-const styleDescription = {
-    padding: '14px',
-    fontSize: '16px',
-    textAlign: 'center',
-    lineHeight: '1.5',
-};
 
 const Weather = (props) => {
+const css = `
+.content{
+    display: flex;
+    justify-content: space-evenly;
+}
+.description-weather{
+    padding: 14px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+}
+`;
     return (
-        <div style={content}>
+        <div>
+        <style>{css}</style>
+        <div className="content">
             <div className="content-weather">
-                <div className="description-weather" style={styleDescription}>
+                <div className="description-weather">
                     {props.city ? (
                         <span>
                             City: <br></br>
@@ -24,7 +27,7 @@ const Weather = (props) => {
                         </span>
                     ) : null}
                 </div>
-                <div className="description-weather" style={styleDescription}>
+                <div className="description-weather">
                     {props.temp_celsius ? (
                         <span>
                             Current temperature: <br></br>
@@ -32,7 +35,7 @@ const Weather = (props) => {
                         </span>
                     ) : null}
                 </div>
-                <div className="description-weather" style={styleDescription}>
+                <div className="description-weather">
                     {props.temp_min ? (
                         <span>
                             Min. temperature: <br></br>
@@ -40,7 +43,7 @@ const Weather = (props) => {
                         </span>
                     ) : null}
                 </div>
-                <div className="description-weather" style={styleDescription}>
+                <div className="description-weather">
                     {props.temp_max ? (
                         <span>
                             Max. temperature: <br></br>
@@ -48,7 +51,7 @@ const Weather = (props) => {
                         </span>
                     ) : null}
                 </div>
-                <div className="description-weather" style={styleDescription}>
+                <div className="description-weather">
                     {props.description ? (
                         <span>
                             Description: <br></br>
@@ -57,7 +60,10 @@ const Weather = (props) => {
                     ) : null}
                 </div>
             </div>
+
+            <div className="description-weather"><h3 className="ui header">{props.currentTime}</h3></div>
             <div className="season-animation">{props.season}</div>
+        </div>
         </div>
     );
 };
